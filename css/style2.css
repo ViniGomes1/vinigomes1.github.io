@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: rgb(255, 230, 230);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {margin: 0 -5px;}
+
+.column{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+    width: 100%; 
+    height: 100%;
+}
+
+
+
+.container{
+    align-items: center;
+    flex-flow:row wrap;
+    box-sizing: border-box;
+    /*display: inline; */
+    width: auto;
+    max-height: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.boxLeft{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0px 20px 1vmax 100px;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(255, 208, 151);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    position: inherit;
+}
+
+.imgBoxLeft{
+    width: 100%;
+    min-height: 100%;
+    border-radius: 8px 8px 0 0 ;
+    background-color: aqua;
+    color: rgb(13, 104, 183);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0 50px 0;
+}
+/* topo | direita | inferior | esquerda */
+
+#contentBoxLeft {
+    margin: 10px 10px 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#contentBoxLeft h3{
+    margin: 10px 10px  10px;
+    color: brown;
+    text-align: left;
+    font-size: 25px;
+}
+
+#contentBoxLeft h4{
+    margin: 10px 10px 0 10px;
+    color: rgb(126, 126, 126);
+    text-align: left;
+}
+
+#contentBoxLeft h4 a{
+    margin: 10px 0px 0px 0px;
+    color: rgb(126, 126, 126);
+    text-align: left;
+    text-decoration: none;
+}
+
+
+
+#cvContent h3{
+    font-size: 15px;
+    margin: 10px 0 0 0px;
+    color: rgb(252, 239, 239);
+    width: 85%;
+    height: 25px;
+    border-radius: 8px;
+    background-color: #6f6f6f;
+    text-align: left;
+    padding: 0px 0px 0 5px;
+    font-size: 18px;
+}
+
+
+.imgBoxCenter{
+    
+    border-radius: 8px 8px 0 0;
+    height: 30%;
+    width: 100%;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.imgBoxCenter h4{
+    font-size: 25px;
+    color: rgb(33, 45, 31);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0 0 0 10px;
+}
+
+#contentBoxCenter p{
+    color: rgb(45, 53, 43);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 15px 0 15px 10px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.boxCenter{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 100px 0 0 30px;
+    width: 60%;
+    height: 100%;
+    background-color:  rgb(255, 208, 151);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxBottomCenter{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 15px 0 0 30px;
+    width: 60%;
+    height: 100%;
+    background-color:  rgb(255, 208, 151);
+    border-radius: 8px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+/* topo | direita | inferior | esquerda */
+.roud{
+    background-color: rgb(94, 94, 94);
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    display: flex;
+    margin: 25px 30px 10px 30px;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+hr{
+    margin: 15px 0 0 30px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(127, 125, 125, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+
+.contentCircle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#formaçãoDestaque{
+    margin: 15px 0 10px 10px;
+    color: rgb(45, 47, 47);
+}
+
+#formaçãoDestaque h2{
+    font-size: 20px;
+}
+  
+.contentCircle h2 {
+    margin: 25px 0 10px 0;
+    color: rgb(45, 47, 47);
+    font-size: 20px;
+}
+
+.contentCircle p {
+    color: rgb(74, 75, 75);
+    margin: 10px 0 20px 0;
+}
+
+/* fixar navbar no topo*/
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+
+.top-content {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255, 230, 230, 0);
+    align-items: center;
+    justify-content: left;
+}
+
+
+/* topo | direita | inferior | esquerda */
+
+.widget-roud{
+    background-color: rgb(94, 94, 94);
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    display: flex;
+    margin: -50px 30px 10px 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.widget-above{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(23, 238, 238);
+}
+
+
+.above{
+    margin: 100px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.above p{
+    color: #f2f2f2;
+}
+
+.empresaDestaque{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 8px;
+    padding: 0px 5px 0 5px;
+    
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0 0px 0 50px;
+    padding: 0;
+    align-items: center;
+}
+
+li{
+    margin: 0 0px 0 20px ;
+}
+.top-content h3{
+    color: aqua;
+}
+
+.cardAbove{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 230, 230, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentCardAbove{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    border-radius: 50px;
+    flex-direction: column;
+}
+
+.contentCardAbove p{
+    color: black;
+    margin: 10px 0 0 0;
+}
+
+
+@media (max-width: 740px) {
+    .boxLeft{
+        margin: 0px 20px 1vmax 10px;
+
+    }
+    .boxContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        margin: 0 0 0 50px;
+    }
+
+    .boxContainer .roud{
+        display: flex;
+        margin: 10px auto;
+    }
+
+    #formaçãoDestaque p{
+        margin: 10px 0 0 0;
+    }
+}
+
+
