@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import IconsDesk from "../IconsDesk";
+//conteudos nas janelas
 import GitHubContent from "../Contents/GithubContent";
+import CurriculoContent from "../Contents/CurriculoContent";
+
+//logos dos icones
+import githubLogo from "../../assets/icones/github.svg";
+import terminal from "../../assets/icones/terminal.svg";
+
+
 
 export default function DesktopContainer({ listaPrimeiros, listagemJanelas }) {
   const divRef = useRef(null);
@@ -20,8 +28,9 @@ export default function DesktopContainer({ listaPrimeiros, listagemJanelas }) {
               x: listaPrimeiros[0]?.x,
               y: listaPrimeiros[0]?.y,
             },
-            iconName: "GitHub",
-            content: <GitHubContent />
+            iconName: "Curriculo",
+            content: <CurriculoContent />,
+            iconLogo: terminal
           },
         },
         {
@@ -32,7 +41,9 @@ export default function DesktopContainer({ listaPrimeiros, listagemJanelas }) {
               x: listaPrimeiros[1]?.x,
               y: listaPrimeiros[1]?.y,
             },
-            iconName: "Teste2",
+            iconName: "GitHub",
+            content: <GitHubContent />,
+            iconLogo: githubLogo
           },
         },
       ]);
@@ -107,6 +118,7 @@ export default function DesktopContainer({ listaPrimeiros, listagemJanelas }) {
           parentHeight={divHeight}
           click={updatePosition}
           clickOpen={() => clicked(item)}
+          iconLogo={item.atributos.iconLogo}
         />
       ))}
     </div>

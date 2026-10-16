@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import githubLogo from "../../assets/icones/github.svg";
+
 
 export default function IconsDesk({
   id,
@@ -9,16 +9,19 @@ export default function IconsDesk({
   parentHeight,
   iconName,
   click,
-  clickOpen
+  clickOpen,
+  iconLogo
 }) {
   const [boxWidth, setBoxWidth] = useState(0);
   const [boxHeight, setBoxHeight] = useState(0);
+  const [zindex, setZindex] = useState(3)
 
   const boxSize = useRef(null);
   const isDragging = useRef(false);
   const dragOffset = useRef({ x: 0, y: 0 });
   const hasMoved = useRef(false); // Flag para diferenciar clique de arrasto
   const targetSlotCoords = useRef(null); // Guarda as coordenadas do slot se houver
+
 
   useEffect(() => {
     if (boxSize.current) {
@@ -29,6 +32,7 @@ export default function IconsDesk({
   }, []);
 
   const handlePointerDown = (e) => {
+    setZindex(4)
     isDragging.current = true;
     hasMoved.current = false;
     targetSlotCoords.current = null;
@@ -39,6 +43,7 @@ export default function IconsDesk({
       x: e.clientX - position.x,
       y: e.clientY - position.y,
     };
+
   };
 
   const handlePointerMove = (e) => {
@@ -95,6 +100,7 @@ export default function IconsDesk({
         y: targetSlotCoords.current.y,
       });
     }
+    setZindex(3)
   };
 
   return (
@@ -107,12 +113,13 @@ export default function IconsDesk({
       style={{
         left: `${position.x + 5}px`,
         top: `${position.y + 5}px`,
+        zIndex: zindex
       }}
       className="absolute w-[75px] h-[85px] bg-red-400/0 select-none touch-none p-2 rounded hover:shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:bg-white/10 hover:backdrop-blur-[7px]"
     >
       <div className="flex justify-center flex-col items-center">
         <div className="pointer-events-none">
-          <img src={githubLogo} className="w-[40px] h-[40px]" alt="" />
+          <img src={iconLogo} className="w-[40px] h-[40px]" alt="" />
         </div>
         <div className="pointer-events-none text-xs">{iconName}</div>
       </div>

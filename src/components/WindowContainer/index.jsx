@@ -51,8 +51,8 @@ export default function WindowContainer({ window, content }) {
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        className="bg-white pl-[4px] select-none touch-none h-[30px] items-center flex justify-between cursor-grab active:cursor-grabbing">
-        <div className="flex justify-between w-[50px]">
+        className="bg-white select-none touch-none h-[30px] items-center grid grid-cols-3 cursor-grab active:cursor-grabbing">
+        <div className="flex justify-between w-[60px] pl-2">
           <div className="bg-red-400 w-[15px] h-[15px] rounded-full">
           </div>
           <div className="bg-orange-400 w-[15px] h-[15px] rounded-full">
@@ -60,9 +60,11 @@ export default function WindowContainer({ window, content }) {
           <div className="bg-green-400 w-[15px] h-[15px] rounded-full">
           </div>
         </div>
-        <p class="text-blue-600 dark:text-sky-400">{window.titulo}</p>
+        <div className="flex justify-center">
+          <p class="text-blue-600 dark:text-sky-400">{window.titulo}</p>
+        </div>
       </div>
-      <div>
+      <div className="w-full h-[calc(100%-30px)]">
         {content}
       </div>
     </div>

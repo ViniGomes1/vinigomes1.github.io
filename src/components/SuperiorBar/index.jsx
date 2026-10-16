@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import americanLogo from "../../assets/icones/AMERICA.svg"
 
 export default function SuperiorBar() {
   const [agora, setAgora] = useState(new Date());
@@ -28,19 +29,24 @@ export default function SuperiorBar() {
     month: "short",
   });
   return (
-    <div className="w-[100%] flex justify-between">
-      <div>
-        <span className="mr-[5px]">Arquivo</span>
-        <span className="mr-[5px]">Editar</span>
-        <span className="mr-[5px]">Exibir</span>
-        <span className="mr-[5px]">Ajuda</span>
-      </div>
-      <div>
-        <span className="mr-[5px]">{diaMes}</span>
-        <span className="mr-[5px]">{mesNome}</span>
-        <span className="mr-[5px]">{horaFormatada}</span>
+    <div className="w-full grid grid-cols-3 items-center px-3">
+      {/* Esquerda */}
+      <div className="flex items-center justify-start">
+        <img src={americanLogo} className="w-[30px] h-[30px]" alt="" />
+        <span className="ml-[5px]">Vinicius Megatrends</span>
       </div>
 
+      {/* Centro exato */}
+      <div className="flex justify-center space-x-1">
+        <span>{diaMes}</span>
+        <span>{mesNome}</span>
+        <span>{horaFormatada}</span>
+      </div>
+
+      {/* Direita */}
+      <div className="flex justify-end">
+        <span>ViniOS</span>
+      </div>
     </div>
   )
 }

@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 @import "tailwindcss";
 
-* {
+body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+}
+
+
+@theme {
+  --font-vt: "VT323", monospace;
+  --font-ubuntu: "Ubuntu", sans-serif;
+  --font-space: "Space Mono", monospace;
+  --font-dotgothic: "DotGothic16", sans-serif;
 }
