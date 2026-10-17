@@ -58,7 +58,7 @@ export default function Terminal() {
           </p>
           <p className="mt-2 text-lg font-bold text-gray-300">Experiência Profissional</p>
           <p className="mt-2 text-md font-medium text-gray-400">Shopping Nova América/Ancar </p>
-          <p className=" text-gray-300">Aprendiz de TI. · Rio de Janeiro, RJ · 06/2025 - 10/2026 </p>
+          <p className=" text-gray-300">Aprendiz de TI · Rio de Janeiro, RJ · 06/2025 - 10/2026 </p>
           <p className="italic text-gray-300">Suportar e assegurar que os recursos de informática sejam utilizados de acordo com as normas da empresa,
             orientando os usuários quando necessário. Atender os chamados de TI nos tempos acordados utilizando a ferramenta  Freshdesk, administrar ativos de TI através do NCentral. Administrar, gerenciar e suportar infraestrutura de rede garantindo o funcionamento adequado dos recursos. Criar, manter e atualizar procedimentos utilizados na unidade. Garantir a integridade do Backup da unidade. Executar atividades obedecendo as políticas, normas e procedimentos internos relacionados principalmente a qualidade, meio ambiente, higiene, saúde e segurança do trabalho, assegurando sua
             integridade física e os padrões definidos pela empresa. </p>

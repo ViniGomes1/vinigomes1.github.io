@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function WindowContainer({ window, content }) {
+export default function WindowContainer({ window, content, onExit, tamanho }) {
   const [isMounted, setIsMounted] = useState(false);
 
   // Posição relativa ao ponto central inicial (0, 0)
@@ -30,7 +30,6 @@ export default function WindowContainer({ window, content }) {
 
     const newX = e.clientX - startPos.current.x;
     const newY = e.clientY - startPos.current.y;
-    console.log(newX)
     setOffset({ x: newX, y: newY });
   };
 
@@ -43,8 +42,10 @@ export default function WindowContainer({ window, content }) {
     <div
       style={{
         transform: `translate(${offset.x}px, ${offset.y}px)`,
+        width: tamanho.w + "px",
+        height: tamanho.h + "px"
       }}
-      className={`z-10 rounded-lg overflow-hidden absolute w-[500px] h-[350px] top-0 bottom-0 left-0 right-0 m-auto backdrop-blur bg-black/50 text-white
+      className={`z-10 rounded-lg overflow-hidden absolute = top-0 bottom-0 left-0 right-0 m-auto backdrop-blur bg-black/50 text-white
        transition-transform duration-700 ease-out ${isMounted ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}
     >
       <div
@@ -53,7 +54,12 @@ export default function WindowContainer({ window, content }) {
         onPointerUp={handlePointerUp}
         className="bg-white select-none touch-none h-[30px] items-center grid grid-cols-3 cursor-grab active:cursor-grabbing">
         <div className="flex justify-between w-[60px] pl-2">
-          <div className="bg-red-400 w-[15px] h-[15px] rounded-full">
+          <div
+            onPointerDown={(e) => e.stopPropagation()}
+            className="z-11 bg-red-400 cursor-pointer w-[15px] h-[15px] rounded-full" onClick={(e) => {
+              e.stopPropagation()
+              onExit(window)
+            }}>
           </div>
           <div className="bg-orange-400 w-[15px] h-[15px] rounded-full">
           </div>
@@ -61,7 +67,7 @@ export default function WindowContainer({ window, content }) {
           </div>
         </div>
         <div className="flex justify-center">
-          <p class="text-blue-600 dark:text-sky-400">{window.titulo}</p>
+          <p className="text-blue-600 dark:text-sky-400">{window.titulo}</p>
         </div>
       </div>
       <div className="w-full h-[calc(100%-30px)]">

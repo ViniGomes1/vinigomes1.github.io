@@ -31,7 +31,7 @@ export default function GridDesktopContainer({ listaPrimeiros }) {
 
   const pegarPrimeiros = () => {
     const rects = {};
-    [0, 1].forEach((idx) => {
+    [0, 1, 2].forEach((idx) => {
       const el = slotRefs.current[idx];
       if (el) {
         rects[idx] = el.getBoundingClientRect();
@@ -40,6 +40,7 @@ export default function GridDesktopContainer({ listaPrimeiros }) {
 
     if (listaPrimeiros && rects[0]) {
       listaPrimeiros(rects);
+      console.log(rects)
     }
   };
 

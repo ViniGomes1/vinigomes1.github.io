@@ -30,8 +30,12 @@ export default function DesktopContainer({ listaPrimeiros, listagemJanelas }) {
             },
             iconName: "Curriculo",
             content: <CurriculoContent />,
-            iconLogo: terminal
+            iconLogo: <i class="bi bi-terminal-fill text-[35px]"></i>
           },
+          tamanho: {
+            w: 500,
+            h: 350
+          }
         },
         {
           id: 1,
@@ -43,8 +47,29 @@ export default function DesktopContainer({ listaPrimeiros, listagemJanelas }) {
             },
             iconName: "GitHub",
             content: <GitHubContent />,
-            iconLogo: githubLogo
+            iconLogo: <i class="bi bi-github text-[35px]"></i>
           },
+          tamanho: {
+            w: 800,
+            h: 550
+          }
+        },
+        {
+          id: 2,
+          box: "box3",
+          atributos: {
+            posicoes: {
+              x: listaPrimeiros[2]?.x,
+              y: listaPrimeiros[2]?.y,
+            },
+            iconName: "LinkedIn",
+            content: <GitHubContent />,
+            iconLogo: <i class="bi bi-linkedin text-[35px]"></i>
+          },
+          tamanho: {
+            w: 800,
+            h: 550
+          }
         },
       ]);
     }
@@ -95,7 +120,8 @@ export default function DesktopContainer({ listaPrimeiros, listagemJanelas }) {
         id: item.id,
         titulo: item.atributos.iconName,
         aberta: true,
-        content: item.atributos.content
+        content: item.atributos.content,
+        tamanho: item.tamanho
       };
 
       return [...prev, novaJanela];

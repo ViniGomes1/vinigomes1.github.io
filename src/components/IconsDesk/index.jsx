@@ -119,7 +119,8 @@ export default function IconsDesk({
     >
       <div className="flex justify-center flex-col items-center">
         <div className="pointer-events-none">
-          <img src={iconLogo} className="w-[40px] h-[40px]" alt="" />
+          {iconLogo}
+          {/*<img src={iconLogo} className="w-[40px] h-[40px]" alt="" /> */}
         </div>
         <div className="pointer-events-none text-xs">{iconName}</div>
       </div>
