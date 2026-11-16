@@ -40,7 +40,6 @@ export default function GridDesktopContainer({ listaPrimeiros }) {
 
     if (listaPrimeiros && rects[0]) {
       listaPrimeiros(rects);
-      console.log(rects)
     }
   };
 
@@ -60,7 +59,7 @@ export default function GridDesktopContainer({ listaPrimeiros }) {
 
   return (
     <div className="h-screen w-screen flex flex-col overflow-hidden">
-      <div className="backdrop-blur-md h-10 bg-slate-800/10 flex items-center justify-items-start text-white">
+      <div className="before:backdrop-blur-md z-5 h-10 bg-slate-800/30 flex items-center justify-items-start text-white">
         <SuperiorBar />
       </div>
 
